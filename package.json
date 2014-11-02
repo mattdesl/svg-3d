@@ -1,0 +1,62 @@
+{
+  "name": "svg-3d",
+  "version": "1.0.0",
+  "description": "experiments with SVG in 3D",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "abs-svg-path": "^0.1.1",
+    "adaptive-bezier-curve": "^1.0.3",
+    "brfs": "^1.2.0",
+    "draw-svg-path": "^1.0.0",
+    "getboundingbox": "0.0.0",
+    "gl-basic-mesh": "^2.0.1",
+    "normalize-svg-path": "^0.1.0",
+    "parse-svg-path": "^0.1.1",
+    "tess2": "git+ssh://git@github.com:mattdesl/tess2.js",
+    "unlerp": "^1.0.1",
+    "vecmath": "^0.1.2",
+    "vectors": "^0.1.0"
+  },
+  "devDependencies": {
+    "cam3d": "^1.0.6",
+    "canvas-testbed": "^1.0.2",
+    "cheerio": "^0.17.0",
+    "string-hash": "^1.1.0",
+    "tape": "^3.0.1"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "build": "browserify tests/draw.js | uglifyjs -cm > tests/js/bundle.js"
+  },
+  "keywords": [
+    "path",
+    "svg",
+    "parse",
+    "scalable",
+    "vector",
+    "grpahics",
+    "paths",
+    "curves",
+    "bezier",
+    "quadratic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/svg-3d.git"
+  },
+  "homepage": "https://github.com/mattdesl/svg-3d",
+  "bugs": {
+    "url": "https://github.com/mattdesl/svg-3d/issues"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  }
+}
